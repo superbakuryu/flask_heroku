@@ -2,7 +2,7 @@ from flask import Flask
 import pymongo
 from datetime import datetime
 
-myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+myclient = pymongo.MongoClient("mongodb://mongo/")
 mydb = myclient["mydatabase"]
 app = Flask(__name__)
 

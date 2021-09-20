@@ -8,7 +8,7 @@ mydb = myclient["mydatabase"]
 
 @app.route("/")
 def hello():
-    NOW = datetime.now().timestamp()
+    NOW = datetime.now()
     mydb.visits.insert_one({'created_at': NOW})
     num = mydb.visits.count_documents({})
     return f"Số lượt truy cập: {num}"

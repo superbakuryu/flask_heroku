@@ -2,8 +2,8 @@ from flask import Flask
 import pymongo
 from datetime import datetime
 
-myclient = pymongo.MongoClient("mongodb://mongo/")
-mydb = myclient["mydatabase"]
+myclient = pymongo.MongoClient("mongodb://0.0.0.0:27017/")
+mydb = myclient["thuan"]
 app = Flask(__name__)
 
 @app.route("/")
